@@ -1,3 +1,4 @@
+package U7T2;
 import java.util.ArrayList;
 
 public class UsedCarLot {
@@ -22,6 +23,23 @@ public class UsedCarLot {
             inventory.set(index2, temp);
             return true;
         } else return false;
+    }
+
+    public void addCar(int indexToAdd, Car carToAdd) {
+        inventory.add(indexToAdd, carToAdd);
+    }
+    
+    public Car sellCarShift(int indexOfCarToSell) {
+        return inventory.remove(indexOfCarToSell);
+    }
+
+    public Car sellCarNoShift(int indexOfCarToSell) {
+        return inventory.set(indexOfCarToSell, null);
+    }
+    
+    public void moveCar(int indexOfCarToMove, int destinationIndex) {
+        Car x = inventory.remove(indexOfCarToMove);
+        inventory.add(destinationIndex, x);
     }
     
     
