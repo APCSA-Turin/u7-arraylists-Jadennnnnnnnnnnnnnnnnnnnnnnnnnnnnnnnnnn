@@ -3,9 +3,18 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Car[] carArray = {new Car("Mustang", 12500), new Car("Camry", 8400), new Car("Ram", 17200)};
-
-        ArrayList<Car> carList = new ArrayList<>(Arrays.asList(carArray));
-        System.out.println(carList);
+        ArrayList<Cat> catList = new ArrayList<Cat>();
+        catList.add(new Cat("Patty"));
+        catList.add(new Cat("Keith"));
+        catList.add(new Cat("Jerry"));
+        catList.add(new Cat("Mary"));
+    
+        for (int i = 0; i < catList.size(); i++) {
+            System.out.println(catList.get(i).getName());
+        }
+        System.out.println();
+        for (Cat cat : catList) {
+            System.out.println(cat.getName());
+        }
     }
 }
